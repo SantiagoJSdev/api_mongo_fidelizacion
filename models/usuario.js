@@ -2,13 +2,15 @@
 const { Schema, model } = require('mongoose');
 
 const UsuarioSchema = Schema({
-    
     correo: {
         type: String,
         required: [true, 'El correo es obligatoria'],
         unique: true
+    },
+    validar: {
+        type: Boolean,
+        default: false
     } 
-    
 })
 
 UsuarioSchema.methods.toJSON = function() {
