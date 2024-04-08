@@ -5,7 +5,7 @@ const usuariosPost = async (req, res) => {
     const { token } = req.body;
 
     try {
-        const decoded = jwt.verify(token, process.env.secretKey);
+        const decoded = jwt.verify(token, process.env.SECRETKEY);
         const usuario = new Usuario({ correo: decoded.correo });
 
         // verificar si el usuario ya existe en la base de datos
