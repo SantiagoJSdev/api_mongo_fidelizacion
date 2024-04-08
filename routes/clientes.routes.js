@@ -11,7 +11,7 @@ router.get("/info", (req, res) => {
 });
   
 
-router.get('/verificacion',    usuariosPost );
+router.post('/verificacion',    usuariosPost );
 // router.get('/:id',    getUsuario );
 // router.post('/',      postUsuario );
 // router.put('/:id',    putUsuario );
